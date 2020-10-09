@@ -1,0 +1,133 @@
+swagger: "2.0"
+info:
+  description: "Documentación que consiste en obtener por id la bd de dynamo o api de star war, y otro endpoint que agrega un item a la bd"
+  version: "1.0.0"
+  title: "Reto rimac"
+  contact:
+    email: "luanflov92@gmail.com"
+host: "turaodz3gb.execute-api.us-east-2.amazonaws.com"
+basePath: "/dev/api/v0.1"
+tags:
+  - name: "PEOPLE"
+    description: "Everything about your Pets"
+    externalDocs:
+      description: "Find out more"
+      url: "http://swagger.io"
+schemes:
+  - "https"
+  - "http"
+paths:
+  /people/{id}:
+    get:
+      tags:
+        - "PEOPLE"
+      summary: "obtener una persona desde una bd o api starwars"
+      description: ""
+      operationId: "getById"
+      produces:
+        - "application/json"
+        - "application/xml"
+      parameters:
+        - name: "id"
+          in: "path"
+          description: "id de la persona en la bd"
+          required: true
+          type: "string"
+
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/People"
+        "404":
+          description: "No se encontró resultado"
+          schema:
+            $ref: "#/definitions/res404GetPeople"
+
+  /people:
+    post:
+      tags:
+        - "PEOPLE"
+      summary: "Agregar una persona a la BD "
+      description: ""
+      operationId: "postPeople"
+      produces:
+        - "application/json"
+        - "application/xml"
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "post people"
+          required: true
+          schema:
+            $ref: "#/definitions/People"
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/resPostPeople"
+        "404":
+          description: "No se encontró resultado"
+          schema:
+            $ref: "#/definitions/res404GetPeople"
+
+definitions:
+  People:
+    type: "object"
+    properties:
+      cumpleanios:
+        type: "string"
+      colorOjo:
+        type: "string"
+      filmacion:
+        type: "array"
+        items:
+          type: "string"
+      genero:
+        type: "string"
+      colorCabello:
+        type: "string"
+      talla:
+        type: "string"
+      lugarNacimiento:
+        type: "string"
+      peso:
+        type: "string"
+      nombre:
+        type: "string"
+      colorPiel:
+        type: "string"
+      creacion:
+        type: "string"
+      edicion:
+        type: "string"
+      especies:
+        type: "array"
+        items:
+          type: "string"
+      naveEstelar:
+        type: "array"
+        items:
+          type: "string"
+      url:
+        type: "string"
+      vehiculos:
+        type: "array"
+        items:
+          type: "string"
+  res404GetPeople:
+    type: "object"
+    properties:
+      message:
+        type: "string"
+  resPostPeople:
+    type: "object"
+    properties:
+      message:
+        type: "string"
+      id:
+        type: "string"
+
+externalDocs:
+  description: "Find out more about Swagger"
+  url: "http://swagger.io"

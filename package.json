@@ -1,0 +1,28 @@
+{
+  "name": "reto-rimac",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "deploy": "serverless deploy",
+    "test": "mocha \"./tests/**/*.js\" --recursive"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "aws-sdk-mock": "^5.1.0",
+    "chai": "^4.2.0",
+    "mocha": "^8.1.3",
+    "serverless-aws-documentation": "^1.1.0",
+    "serverless-mocha-plugin": "^1.12.0",
+    "serverless-offline": "^6.5.0",
+    "serverless-openapi-documentation": "^0.4.0",
+    "sinon": "^9.2.0"
+  },
+  "dependencies": {
+    "axios": "^0.20.0",
+    "uuid": "^8.3.0",
+    "winston": "^3.3.3"
+  }
+}

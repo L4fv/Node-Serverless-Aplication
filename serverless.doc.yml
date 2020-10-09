@@ -1,0 +1,65 @@
+endpoints:
+  getPersona:
+    summary: "Funcion que trae la persona por ID"
+    description: "Endpoint que trae la persona por ID"
+    tags:
+      - "reto-rimac, get"
+    requestBody:
+      description: "Información por ID"
+    requestModels:
+      application/json: getPeopleByIdReq
+    methodResponses:
+      - statusCode: "200"
+        responseBody:
+          description: "Funcion que trae la persona por ID"
+        responseModels:
+          application/json: getPeopleByIdRes
+  postPersona:
+    summary: "Funcion que guarda la información de una persona"
+    description: "Funcion que guarda la información de una persona"
+    tags:
+      - "reto-rimac, post"
+    requestBody:
+      description: "Información necesaria para guardar una persona"
+    requestModels:
+      application/json: postPeopleReq
+    methodResponses:
+      - statusCode: "200"
+        responseBody:
+          description: "Información necesaria para guardar una persona"
+        responseModels:
+          application/json: postPeopleRes
+
+documentation:
+  info:
+    version: "0.0.1"
+    title: "RETO-RIMAC"
+    description: "Esta API incluye 2 servicios para para obtener y agregar información ala BD"
+    contact:
+      name: "Luis Flores"
+      email: "luanflov92@gmail.com"
+
+  models:
+    - name: getPeopleByIdReq
+      description: Modelo de la petición para obtener una cotización.
+      contentType: application/json
+      schema:
+        type: "object"
+        properties:
+          pathParams:
+            - name: "id"
+              description: "el id de la persona en la BD"
+              schema:
+                type: "integer"
+    - name: getPeopleByIdRes
+      description: Modelo de respuesta al crear una cotización.
+      contentType: application/json
+      schema:
+        type: "object"
+        pathParams:
+          - name: "id"
+            description: "ID of the thing you want to create"
+        properties:
+          request:
+            type: "object"
+            properties: ${file(docs/schemas/response/getPeopleById.json)}

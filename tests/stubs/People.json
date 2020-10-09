@@ -1,0 +1,37 @@
+{
+    "cumpleanios": "57BBY",
+    "colorOjo": "blue-gray",
+    "filmacion": [
+      "http://swapi.py4e.com/api/films/1/",
+      "http://swapi.py4e.com/api/films/2/",
+      "http://swapi.py4e.com/api/films/3/",
+      "http://swapi.py4e.com/api/films/4/",
+      "http://swapi.py4e.com/api/films/5/",
+      "http://swapi.py4e.com/api/films/6/"
+    ],
+    "genero": "male",
+    "colorCabello": "auburn, white",
+    "talla": "182",
+    "lugarNacimiento": "http://swapi.py4e.com/api/planets/20/",
+    "peso": "77",
+    "nombre": "Obi-Wan Kenobi",
+    "colorPiel": "fair",
+    "creacion": "2014-12-10T16:16:29.192000Z",
+    "edicion": "2014-12-20T21:17:50.325000Z",
+    "especies": [
+      "http://swapi.py4e.com/api/species/1/"
+    ],
+    "naveEstelar": [
+      "http://swapi.py4e.com/api/starships/48/",
+      "http://swapi.py4e.com/api/starships/59/",
+      "http://swapi.py4e.com/api/starships/64/",
+      "http://swapi.py4e.com/api/starships/65/",
+      "http://swapi.py4e.com/api/starships/74/"
+    ],
+    "url": "http://swapi.py4e.com/api/people/10/",
+    "vehiculos": [
+      "http://swapi.py4e.com/api/vehicles/38/"
+    ],
+    "id":"57f80255-c689-4afc-889d-bea712d74fd8",
+    "createAt":"12312313"
+  }
