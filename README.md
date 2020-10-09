@@ -12,18 +12,20 @@ Crear un endpoint GET que muestre la data almacenada.
     ├── serverless.yml
     ├── src
     │ └── controllers
-    │ │   ├── GetPeople.js
-    │ │   └── PostPlaneta.js
+    │ │   ├── GetPeopleCtrl.js
+    │ │   └── PostPeopleCtr.js
     │ ├── db
     │ │    └── dynamoDB.js
     │ ├── helpers
-    │ │   └── starwars.js
+    │ │   ├── consumers
+    │ │   │     └── starwars.js
     │ ├── models
     │ │   └── People.js
     │ ├── test
     │     └── People.js
     |
     ├── package.json
+    ├── swager.yml
     ├── README.md
 
 # HOW TO DEPLOY
@@ -34,5 +36,5 @@ Crear un endpoint GET que muestre la data almacenada.
 
 # Documentation API | SWAGER API
 
-> swager.yml
-> server on : [https://app.swaggerhub.com/apis/L4fv/reto-rimac/1.0.0]
+- LOCAL ./swager.yml
+- ONLINE : [https://app.swaggerhub.com/apis/L4fv/reto-rimac/1.0.0]
